@@ -212,11 +212,6 @@
                     }
                 }
             }
-
-            // Add polyline to the map
-            if (latLonArray.length > 1) {
-                L.polyline(latLonArray, { color: 'blue' }).addTo(map);
-            }
         }
 
         // Populate the year dropdown
@@ -253,6 +248,17 @@
         const initialYear = document.getElementById('yearSelect').value;
         const initialPeriode = document.getElementById('periodeSelect').value;
         addMarkers(data, initialYear, initialPeriode);
+
+        // Load GeoJSON file and add to map
+        fetch('output.geojson')
+            .then(response => response.json())
+            .then(data => {
+                L.geoJSON(data, {
+                    style: function (feature) {
+                        return { color: 'blue' };
+                    }
+                }).addTo(map);
+            });
     </script>
 </body>
 </html>
