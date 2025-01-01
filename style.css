@@ -1,0 +1,186 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align all elements */
+    background-color: #ffffff; /* White background color */
+    background-image: url('background.jpg'); /* Link to the JPG file */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+}
+
+header {
+    background-color: #ff0000; /* Red background */
+    color: #ffffff; /* White text */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add some padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below header */
+    width: 100%;
+    max-width: 1200px; /* Set a maximum width */
+}
+
+header .header-content h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2em; /* Increase font size */
+}
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* Set a maximum width */
+}
+
+#toggle-controls {
+    margin: 10px;
+    padding: 10px;
+    background-color: #ff0000; /* Red background */
+    color: #ffffff; /* White text */
+    border: 1px solid #ccc; /* Border for better visibility */
+    cursor: pointer;
+    width: 100%; /* Make the width consistent */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#toggle-controls:hover {
+    background-color: #cc0000; /* Slightly darker red on hover */
+}
+
+fieldset {
+    width: 100%;
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below controls */
+}
+
+.hidden {
+    display: none;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #ff0000; /* Red text color */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Darker text color for better readability */
+}
+
+select, button {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #ccc; /* Border for better visibility */
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Darker text color for better readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below map */
+}
+
+footer {
+    width: 100%;
+    background-color: #ff0000; /* Red background */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    border-radius: 8px; /* Rounded corners */
+    margin-top: 20px; /* Space above footer */
+    text-align: center;
+    color: #ffffff; /* White text */
+}
+
+footer h3 {
+    margin: 0;
+    font-size: 1em; /* Reduced font size */
+}
+
+#klasifikasi-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#klasifikasi-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff; /* White text */
+}
+
+.klasifikasi-item {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px;
+    width: 150px;
+    box-sizing: border-box;
+    border-radius: 8px; /* Rounded corners */
+    background-color: white; /* White background for better contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.klasifikasi-item .skor {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333; /* Darker text color for better readability */
+}
+
+.klasifikasi-item .klasifikasi {
+    font-size: 14px;
+    color: #333; /* Darker text color for better readability */
+}
+
+.custom-div-icon .marker-pin {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #000;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.custom-div-icon .marker-pin::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #000;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.leaflet-control-custom {
+    background: url('north-arrow.png') no-repeat center center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
